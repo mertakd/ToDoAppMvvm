@@ -1,4 +1,4 @@
-package com.example.todoappmvvm.data
+package com.example.todoappmvvm.data.models
 
 enum class Priority {
     HIGH,
