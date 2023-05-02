@@ -16,7 +16,7 @@ class ToDoViewModel(application: Application): AndroidViewModel(application) {
     private val repository: ToDoRepository
 
 
-    private val getAllData: LiveData<List<ToDoData>>
+    val getAllData: LiveData<List<ToDoData>>
 
 
     init {
