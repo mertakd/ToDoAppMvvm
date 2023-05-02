@@ -13,11 +13,13 @@ import com.example.todoappmvvm.data.models.ToDoData
 import com.example.todoappmvvm.data.viewmodel.ToDoViewModel
 import com.example.todoappmvvm.databinding.FragmentAddBinding
 import com.example.todoappmvvm.databinding.FragmentListBinding
+import com.example.todoappmvvm.fragments.SharedViewModel
 
 
 class AddFragment : Fragment() {
 
     private val mToDoViewModel: ToDoViewModel by viewModels()
+    private val mSharedViewModel: SharedViewModel by viewModels()
 
     private var _binding: FragmentAddBinding? = null
     private val binding get() = _binding!!
@@ -54,13 +56,13 @@ class AddFragment : Fragment() {
         val mPriority = binding.prioritiesSpinner.selectedItem.toString()
         val mDescription = binding.descriptionEt.text.toString()
 
-        val validation = verifyDataFromUser(mTitle, mDescription)
+        val validation = mSharedViewModel.verifyDataFromUser(mTitle, mDescription)
         if (validation){
             //insert data to database
             val newData = ToDoData(
                 0,
                 mTitle,
-                parsePriority(mPriority),
+                mSharedViewModel.parsePriority(mPriority),
                 mDescription
             )
             mToDoViewModel.insertData(newData)
@@ -74,19 +76,5 @@ class AddFragment : Fragment() {
     }
 
 
-    private fun verifyDataFromUser(title: String, description:String):Boolean{
-        return if (TextUtils.isEmpty(title) || TextUtils.isEmpty(description)){
-            false
-        }else !(title.isEmpty() || description.isEmpty())
-    }
 
-    private fun parsePriority(priority: String):Priority{
-        return when(priority){
-            "High Priority" -> {Priority.HIGH}
-            "Medium Priority" -> {Priority.MEDIUM}
-            "Low Priority" -> {Priority.LOW}
-            else -> Priority.LOW
-
-        }
-    }
 }
