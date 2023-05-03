@@ -12,6 +12,7 @@ import com.example.todoappmvvm.data.models.Priority
 
 class SharedViewModel(application: Application) : AndroidViewModel(application){
 
+    //spinner daki textview ın yazı rengini değiştiriyoruz
     val listener: AdapterView.OnItemSelectedListener = object :
         AdapterView.OnItemSelectedListener{
         override fun onNothingSelected(p0: AdapterView<*>?) {}
@@ -27,8 +28,6 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
                 2 -> { (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.green))}
             }
         }
-
-
 
     }
 
@@ -49,6 +48,17 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
                 Priority.LOW}
             else -> Priority.LOW
 
+        }
+    }
+
+
+
+    //PPRİORİTY nesnesini integer a dönüştürüyor.
+    fun parsePriorityToInt(priority: Priority) : Int{
+        return when(priority){
+            Priority.HIGH -> 0
+            Priority.MEDIUM -> 1
+            Priority.LOW -> 2
         }
     }
 

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoappmvvm.R
 import com.example.todoappmvvm.data.models.Priority
@@ -21,10 +22,14 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     inner class MyViewHolder(private val binding: RowLayoutBinding): RecyclerView.ViewHolder(binding.root) {
 
         fun bind(toDoData: ToDoData){
-            binding.titleTxt.text = dataList[position].title
-            binding.descriptionTxt.text = dataList[position].description
+            binding.titleTxt.text = dataList[adapterPosition].title
+            binding.descriptionTxt.text = dataList[adapterPosition].description
+            binding.rowBackground.setOnClickListener {
+                val action = ListFragmentDirections.actionListFragmentToUpdateFragment(dataList[position])
+                binding.root.findNavController().navigate(action)
+            }
 
-            when(dataList[position].priority){
+            when(dataList[adapterPosition].priority){
                 Priority.HIGH -> binding.priorityIndicator.setCardBackgroundColor(ContextCompat.getColor(
                     binding.root.context,
                     R.color.red))
