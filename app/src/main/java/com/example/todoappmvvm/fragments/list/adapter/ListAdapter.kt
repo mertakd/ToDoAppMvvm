@@ -2,9 +2,11 @@ package com.example.todoappmvvm.fragments.list.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoappmvvm.data.models.ToDoData
 import com.example.todoappmvvm.databinding.RowLayoutBinding
+import com.example.todoappmvvm.fragments.add.ToDoDiffUtil
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
@@ -53,8 +55,14 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
 
     fun setData(toDoData: List<ToDoData>){
+        val toDoDiffUtil = ToDoDiffUtil(dataList, toDoData)
+        val toDoDiffResult = DiffUtil.calculateDiff(toDoDiffUtil)
         this.dataList = toDoData
+        toDoDiffResult.dispatchUpdatesTo(this)
+       /* this.dataList = toDoData
         notifyDataSetChanged()
+        //notifyDataSetChanged() biz bir veriyi güncellesek bile notifyDataSetChanged() fonksiyonu recyclervie daki tüm item ları/tüm verileri güncelliyor view çağırıldığında.performanslı değil.bu yüzden diffutil i kullanmalıyız.
+        //diffutil recyclerview listesinde birçok item olsa bile sadece güncellenen item ı günceller, tüm listeyi güncellemez.daha performanslı*/
     }
 
 }
