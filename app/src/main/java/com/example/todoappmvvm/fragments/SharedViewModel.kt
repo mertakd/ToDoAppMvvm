@@ -7,10 +7,21 @@ import android.widget.AdapterView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import com.example.todoappmvvm.R
 import com.example.todoappmvvm.data.models.Priority
+import com.example.todoappmvvm.data.models.ToDoData
 
 class SharedViewModel(application: Application) : AndroidViewModel(application){
+
+    val emptyDatabase: MutableLiveData<Boolean> = MutableLiveData(true)
+
+    fun checkIfDatabaseEmpty(toDoData: List<ToDoData>){
+        emptyDatabase.value = toDoData.isEmpty()
+        //false durumu
+    }
+
+
 
     //spinner daki textview ın yazı rengini değiştiriyoruz
     val listener: AdapterView.OnItemSelectedListener = object :
@@ -52,6 +63,9 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
     }
 
 
+/*
+
+    //bu logic bindingadapter a taşındı:d
 
     //PPRİORİTY nesnesini integer a dönüştürüyor.
     fun parsePriorityToInt(priority: Priority) : Int{
@@ -62,5 +76,6 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
         }
     }
 
+*/
 
 }
