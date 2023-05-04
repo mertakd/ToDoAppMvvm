@@ -4,8 +4,11 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.todoappmvvm.R
@@ -36,8 +39,8 @@ class UpdateFragment : Fragment() {
     ): View? {
         _binding = FragmentUpdateBinding.inflate(layoutInflater, container, false)
         binding.argsBinding = args
-        //set menu
-        setHasOptionsMenu(true)
+        /*//set menu
+        setHasOptionsMenu(true)*/
 /*
         //layout içine args bind edildi
 
@@ -55,7 +58,27 @@ class UpdateFragment : Fragment() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val menuHost: MenuHost = requireActivity()
+        menuHost.addMenuProvider(object: MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.update_fragment_menu, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                when (menuItem.itemId) {
+                    R.id.menu_save -> updateItem()
+                    R.id.menu_delete -> confirmItemRemoval()
+                    android.R.id.home -> requireActivity().onBackPressed()
+                }
+                return true
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+    }
+
+   /* override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.update_fragment_menu, menu)
     }
 
@@ -65,7 +88,7 @@ class UpdateFragment : Fragment() {
             R.id.menu_delete -> confirmItemRemoval()
         }
         return super.onOptionsItemSelected(item)
-    }
+    }*/
 
 
 
