@@ -101,7 +101,7 @@ class UpdateFragment : Fragment() {
         if (validation){
             //Update current item
             val updateItem = ToDoData(
-                args.currentItem.id,
+                args.currentItem.id, //Bu nesne, args.currentItem öğesinden gelen önceki öğenin id özelliğiyle oluşturulur ve yeni verilerle güncellenir.
                 title,
                 mSharedViewModel.parsePriority(getPriority),
                 description

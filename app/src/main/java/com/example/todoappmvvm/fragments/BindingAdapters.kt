@@ -49,6 +49,8 @@ class BindingAdapters {
         }
 
 
+
+        //recyclervieew item carview içinde ki yuvarlak  item ın renk değiştirme mantığı.
         @BindingAdapter("android:parsePriorityColor")
         @JvmStatic
         fun parsePriorityColor(cardView: CardView, priority: Priority){
@@ -61,6 +63,10 @@ class BindingAdapters {
         }
 
 
+
+
+        //veritabanından çektiğimiz getalldata verilerini currentıtem adında safe args a atadık.
+          //bu veriler list fragment dan update fragment a taşınıyor.
         @BindingAdapter("android:sendDataToUpdateFragment")
         @JvmStatic
         fun sendDataToUpdateFragment(view: ConstraintLayout, currentItem: ToDoData){

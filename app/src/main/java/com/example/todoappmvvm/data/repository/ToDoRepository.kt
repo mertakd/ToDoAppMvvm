@@ -17,6 +17,9 @@ class ToDoRepository(private val toDoDao: ToDoDao) {
     suspend fun insertData(toDoData: ToDoData){
         toDoDao.insertData(toDoData)
     }
+    /**
+     *  ToDoData nesnesi, veritabanına eklemek istediğimiz verileri içerir.Yani, bu kod, toDoData adlı bir ToDoData nesnesini alır ve
+     bu nesneyi Room veritabanına eklemek için DAO arayüzündeki insertData() yöntemini çağırır. */
 
 
     suspend fun updateData(toDoData: ToDoData){

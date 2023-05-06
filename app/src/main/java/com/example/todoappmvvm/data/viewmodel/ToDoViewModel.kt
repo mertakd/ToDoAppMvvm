@@ -17,6 +17,7 @@ class ToDoViewModel(application: Application): AndroidViewModel(application) {
 
 
     val getAllData: LiveData<List<ToDoData>>
+    //database imizdeki dataları liste şeklinde tutuyor.
 
     val sortByHighPriority: LiveData<List<ToDoData>>
     val sortByLowPriority: LiveData<List<ToDoData>>

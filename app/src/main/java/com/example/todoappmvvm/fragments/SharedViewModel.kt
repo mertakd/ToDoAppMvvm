@@ -58,6 +58,8 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
 
 
 
+
+    //stringden nesneye dönüştürülüyor.
     fun parsePriority(priority: String): Priority {
         return when(priority){
             "High Priority" -> {
