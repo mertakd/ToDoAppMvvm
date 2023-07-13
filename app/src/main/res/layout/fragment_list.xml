@@ -38,8 +38,10 @@
             android:clickable="true"
             android:focusable="true"
             android:navigateToAddFragment="@{true}"
-            android:src="@drawable/ic_add"
-            android:tint="@color/white"
+            android:src="@drawable/second_add"
+            app:tint="@color/white"
+            app:backgroundTint="@color/purple_500"
+            android:elevation="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
