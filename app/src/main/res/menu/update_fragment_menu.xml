@@ -6,13 +6,14 @@
         android:id="@+id/menu_save"
         android:title="@string/save"
         android:icon="@drawable/ic_save"
-        android:iconTint="@color/white"
+        app:iconTint="@color/white"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/menu_delete"
         android:title="@string/delete"
-        app:showAsAction="never"/>
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="always"/>
 
 
 </menu>

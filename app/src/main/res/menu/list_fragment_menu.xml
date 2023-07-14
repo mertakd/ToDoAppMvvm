@@ -14,21 +14,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_sortBy"
-            android:title="@string/sort_by">
+            android:title="@string/sort_by"
+            android:icon="@drawable/ic_slider_filter"
+            app:iconTint="@color/white"
+            app:showAsAction="always"
+            >
             <menu>
                 <item
                     android:id="@+id/menu_priority_high"
-                    android:title="@string/priority_high"/>
+                    android:title="@string/priority_high"
+                    android:icon="@drawable/ic_upward_24"/>
                 <item
                     android:id="@+id/menu_priority_low"
-                    android:title="@string/priority_low"/>
+                    android:title="@string/priority_low"
+                    android:icon="@drawable/ic_downward"/>
             </menu>
         </item>
     </group>
 
+
+
     <item
         android:id="@+id/menu_delete_all"
         android:title="@string/delete_all"
-        app:showAsAction="never"/>
+        android:icon="@drawable/ic_delete"
+        app:iconTint="@color/white"
+        app:showAsAction="always"/>
 
 </menu>
