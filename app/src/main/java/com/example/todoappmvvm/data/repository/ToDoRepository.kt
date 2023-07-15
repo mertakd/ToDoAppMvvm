@@ -39,4 +39,10 @@ class ToDoRepository(private val toDoDao: ToDoDao) {
     }
 
 
+    /**
+     *Repository sınıfı, uygulamanın geri kalanına veri erişimi(data access) için temiz API sağlar
+
+     */
+
+
 }

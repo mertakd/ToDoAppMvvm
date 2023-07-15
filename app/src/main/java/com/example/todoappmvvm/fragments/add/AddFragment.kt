@@ -45,6 +45,7 @@ class AddFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
 
@@ -62,6 +63,7 @@ class AddFragment : Fragment() {
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
+
 
 
    /* override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -92,11 +94,11 @@ class AddFragment : Fragment() {
                 mDescription
             )
             mToDoViewModel.insertData(newData)
-            Toast.makeText(requireContext(),"Successfully added!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"Başarıyla Eklendi!", Toast.LENGTH_SHORT).show()
             //Navigate Back
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }else{
-            Toast.makeText(requireContext(),"Please fill out will fields!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"Lütfen Boş Alanları Doldurunuz!", Toast.LENGTH_SHORT).show()
 
         }
     }

@@ -21,6 +21,8 @@ class Converter {
 
 
     /**
+     * room veritabanı yalnızca string, integer, boolean, float  gibi ilkel türlere izin verir. Priority sınıfı gibi custom(özel) nesnelere izin vermiyor. Bu yüzden type converter yapmamız gerekiyor.
+     * veri tabanımıza yazarken öncelikle nesneyi stringe, veritabanımızdan okurken string i Priority nesnesine dönüştürmemiz gerekiyor.
      * bir Priority öğesinin veritabanına kaydedilmesi için bir String'e dönüştürülmesi ve
     veritabanından alındığında bir Priority öğesi olarak yeniden oluşturulması gerekmektedir.*/
 }

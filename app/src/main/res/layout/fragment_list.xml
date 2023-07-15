@@ -20,14 +20,15 @@
             android:id="@+id/recyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:paddingTop="8dp"
             android:clipToPadding="false"
             android:layoutAnimation="@anim/recyclerview_anim"
+            android:paddingTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -38,9 +39,9 @@
             android:clickable="true"
             android:focusable="true"
             android:navigateToAddFragment="@{true}"
-            android:src="@drawable/second_add"
-            app:tint="@color/white"
-            app:backgroundTint="@color/purple_500"
+            android:src="@drawable/ic_octopus4"
+
+            app:backgroundTint="#4A328F"
             android:elevation="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

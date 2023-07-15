@@ -26,7 +26,9 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
     //spinner daki textview ın yazı rengini değiştiriyoruz
     val listener: AdapterView.OnItemSelectedListener = object :
         AdapterView.OnItemSelectedListener{
+
         override fun onNothingSelected(p0: AdapterView<*>?) {}
+
         override fun onItemSelected(
             parent: AdapterView<*>?,
             view: View?,

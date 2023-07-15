@@ -61,4 +61,11 @@ class ToDoViewModel(application: Application): AndroidViewModel(application) {
         return repository.searchDatabase(searchQuery)
     }
 
+
+    /**
+     * ViewModel repository ve UI arasında kibir iletişim merkezi görevini görür.
+     * ViewModel ise görsel arayüz(UI) ile model arasında köprü görevi görmektedir, yani Model’i View’a bağlayan yapıdır. View ile Model arasında doğrudan bir etkileşim yoktur. View, ilgili işlemleri ViewModel üzerinden yapmaktadır. ViewModel’ın View’a direkt erişimi yoktur ve View ile ilgili hiçbir şey bilmez.
+     *
+     */
+
 }
