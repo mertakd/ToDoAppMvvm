@@ -39,9 +39,8 @@
             android:clickable="true"
             android:focusable="true"
             android:navigateToAddFragment="@{true}"
-            android:src="@drawable/ic_octopus4"
-
-            app:backgroundTint="#4A328F"
+            android:src="@drawable/second_add"
+            app:backgroundTint="#7752BA"
             android:elevation="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -64,6 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/no_data"
+            android:textColor="#353334"
             android:visibility="invisible"
             android:emptyDatabase="@{mBindingSharedViewModel.emptyDatabase}"
             android:alpha="0.5"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -9,100 +9,100 @@
             type="com.example.todoappmvvm.data.models.ToDoData" />
     </data>
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/lightGray">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        android:background="@color/lightGray">
 
-        
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="@drawable/item_background">
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            >
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="@color/yellow">
+                android:layout_height="250dp"
+                android:background="@drawable/item_background">
 
 
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/priority_indicator"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/item_background_relative"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="60dp"
-                    android:layout_marginEnd="50dp"
-                    android:layout_alignParentRight="true"
-                    android:parsePriorityColor="@{toDoDataBinding.priority}"
-                    app:cardBackgroundColor="@color/red"
-                    app:cardCornerRadius="100dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp">
 
 
-                <TextView
-                    android:id="@+id/title_txt"
-                    android:layout_width="240dp"
-                    android:layout_height="wrap_content"
-                    android:text="@{toDoDataBinding.title}"
-                    android:layout_alignParentTop="true"
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/priority_indicator"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="50dp"
+                        android:layout_alignParentRight="true"
+                        android:parsePriorityColor="@{toDoDataBinding.priority}"
+                        app:cardBackgroundColor="@color/red"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/title_txt"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:text="@{toDoDataBinding.title}"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginEnd="45dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/description_txt"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="35dp"
+                        android:layout_alignParentBottom="true"
+                        android:maxLength="300"
+                        android:maxLines="10"
+                        android:text="@{toDoDataBinding.description}"
+                        android:textColor="@color/white"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="110dp"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="55dp"
-                    android:layout_marginEnd="45dp"
-                    android:textColor="@color/darkGray"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:id="@+id/description_txt"
-                    android:layout_width="270dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="35dp"
-                    android:layout_alignParentBottom="true"
-                    android:maxLength="300"
-                    android:maxLines="10"
-                    android:text="@{toDoDataBinding.description}"
-                    android:textColor="@color/darkGray"
-                     />
-
-
-
-
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/ic_octopus2" />
             </RelativeLayout>
 
-            <ImageView
-                android:layout_width="130dp"
-                android:layout_height="110dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="0dp"
-                android:src="@drawable/ic_octopus2" />
-        </RelativeLayout>
 
-
-    </LinearLayout>
+        </LinearLayout>
 
 
 
 
 
 
-</ScrollView>
+    </ScrollView>
 </layout>

@@ -107,11 +107,11 @@ class UpdateFragment : Fragment() {
                 description
             )
             mToDoViewModel.updateData(updateItem)
-            Toast.makeText(requireContext(),"Successfully updated!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"Başarıyla Güncellendi!", Toast.LENGTH_LONG).show()
             //navigate back
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }else{
-            Toast.makeText(requireContext(),"Please fill out all fields!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"Lütfen Boş Alanları Doldurun!", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -121,18 +121,18 @@ class UpdateFragment : Fragment() {
     //alert dialog ile tek bir item silme işlemi
     private fun confirmItemRemoval() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") {_, _ ->
+        builder.setPositiveButton("Evet") {_, _ ->
             mToDoViewModel.deleteItem(args.currentItem)
             Toast.makeText(
                 requireContext(),
-                "Successfully Removed: ${args.currentItem.title}",
+                "Başarıyla Kaldırıldı: ${args.currentItem.title}",
                 Toast.LENGTH_SHORT
             ).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }
-        builder.setNegativeButton("No"){_,_ ->}
-        builder.setTitle("Delete ${args.currentItem.title}?")
-        builder.setMessage("Are you sure you want to remove ${args.currentItem.title}?")
+        builder.setNegativeButton("Hayır"){_,_ ->}
+        builder.setTitle("Sil ${args.currentItem.title}?")
+        builder.setMessage("Kaldırmak istediğine emin misin ${args.currentItem.title}?")
         builder.create().show()
     }
 

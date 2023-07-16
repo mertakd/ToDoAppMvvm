@@ -28,6 +28,8 @@ class BindingAdapters {
         }
 
 
+
+        //list fragment da not yok resim ve yazısı ile ilgili logic
         @BindingAdapter("android:emptyDatabase")
         @JvmStatic
         fun emptyDatabase(view: View, emptyDatabase: MutableLiveData<Boolean>){
@@ -38,6 +40,8 @@ class BindingAdapters {
             }
         }
 
+
+        //priority nesnesini, integer a dönüştürüyor.
         @BindingAdapter("android:parsePriorityToInt")
         @JvmStatic
         fun parsePriorityToInt(view: Spinner, priority: Priority){

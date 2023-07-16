@@ -54,6 +54,18 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
 
 
+/*eski kullanımı
+
+*   override fun onBindViewHolder(holder:MyViewHolder, position: Int){
+        holder.itemView.title_txt.text = dataList[position].title
+        holder.itemView.description_txt.text = dataList[position].description
+
+        val priority = dataList[position].priority
+
+    }
+ */
+
+
     fun setData(toDoData: List<ToDoData>){
         val toDoDiffUtil = ToDoDiffUtil(dataList, toDoData)
         val toDoDiffResult = DiffUtil.calculateDiff(toDoDiffUtil)

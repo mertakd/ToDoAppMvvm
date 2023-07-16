@@ -14,11 +14,13 @@ import com.example.todoappmvvm.data.models.ToDoData
 
 class SharedViewModel(application: Application) : AndroidViewModel(application){
 
+    //list fragment da not yok resim ve yazısı ile ilgili logic
     val emptyDatabase: MutableLiveData<Boolean> = MutableLiveData(false)
 
     fun checkIfDatabaseEmpty(toDoData: List<ToDoData>){
         emptyDatabase.value = toDoData.isEmpty()
-        //false durumu
+        //dataList empty ise true, yani default durumu true
+        //boş değilse false
     }
 
 

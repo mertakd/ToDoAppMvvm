@@ -232,18 +232,18 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
     //alert dialog ile tüm notları silmek
     private fun confirmRemoval() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") {_, _ ->
+        builder.setPositiveButton("Evet") {_, _ ->
             mToDoViewModel.deleteAll()
             Toast.makeText(
                 requireContext(),
-                "Successfully Removed Everything!",
+                "Herşey Başarıyla Kaldırıldı!",
                 Toast.LENGTH_SHORT
             ).show()
 
         }
-        builder.setNegativeButton("No"){_,_ ->}
-        builder.setTitle("Delete Everything?")
-        builder.setMessage("Are you sure you want to remove everything?")
+        builder.setNegativeButton("Hayır"){_,_ ->}
+        builder.setTitle("Herşey Silinsin Mi?")
+        builder.setMessage("Her şeyi kaldırmak istediğinizden emin misiniz?")
         builder.create().show()
     }
 
