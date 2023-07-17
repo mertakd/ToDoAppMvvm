@@ -1,6 +1,7 @@
 package com.example.todoappmvvm.fragments
 
 import android.view.View
+import android.widget.RelativeLayout
 import android.widget.Spinner
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -73,7 +74,7 @@ class BindingAdapters {
           //bu veriler list fragment dan update fragment a taşınıyor.
         @BindingAdapter("android:sendDataToUpdateFragment")
         @JvmStatic
-        fun sendDataToUpdateFragment(view: ConstraintLayout, currentItem: ToDoData){
+        fun sendDataToUpdateFragment(view: RelativeLayout, currentItem: ToDoData){
             view.setOnClickListener {
                 val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
                 view.findNavController().navigate(action)

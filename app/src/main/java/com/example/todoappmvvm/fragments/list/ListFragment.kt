@@ -106,6 +106,14 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
                         mToDoViewModel.sortByLowPriority.observe(viewLifecycleOwner) {
                             adapter.setData(it)
                         }
+                    R.id.alpha_up ->
+                        mToDoViewModel.sortByAsc.observe(viewLifecycleOwner){
+                            adapter.setData(it)
+                        }
+                    R.id.alpha_down ->
+                        mToDoViewModel.sortByDsc.observe(viewLifecycleOwner){
+                            adapter.setData(it)
+                        }
                     android.R.id.home -> requireActivity().onBackPressed()
                 }
                 return true
@@ -148,10 +156,10 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
 
     private fun restoreDeletedData(view: View, deletedItem: ToDoData, position: Int){
         val snackbar = Snackbar.make(
-            view, "Deleted '${deletedItem.title}'",
+            view, "Silindi '${deletedItem.title}'",
             Snackbar.LENGTH_LONG
         )
-        snackbar.setAction("Undo"){
+        snackbar.setAction("Geri Al"){
             mToDoViewModel.insertData(deletedItem)
             adapter.notifyItemChanged(position)
         }

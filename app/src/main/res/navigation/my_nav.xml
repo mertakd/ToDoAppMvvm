@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.todoappmvvm.fragments.list.ListFragment"
-        android:label="ToDo List"
+        android:label="OctoNote"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_addFragment"
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/addFragment"
         android:name="com.example.todoappmvvm.fragments.add.AddFragment"
-        android:label="Add"
+        android:label="Not Ekle"
         tools:layout="@layout/fragment_add" >
         <action
             android:id="@+id/action_addFragment_to_listFragment"
@@ -41,7 +41,7 @@
     <fragment
         android:id="@+id/updateFragment"
         android:name="com.example.todoappmvvm.fragments.update.UpdateFragment"
-        android:label="Update"
+        android:label="Not Güncelle"
         tools:layout="@layout/fragment_update" >
         <action
             android:id="@+id/action_updateFragment_to_listFragment"

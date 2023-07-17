@@ -28,6 +28,14 @@
                     android:id="@+id/menu_priority_low"
                     android:title="@string/priority_low"
                     android:icon="@drawable/ic_downward"/>
+                <item
+                    android:id="@+id/alpha_up"
+                    android:title="@string/ascending"
+                    android:icon="@drawable/ic_alpha_up"/>
+                <item
+                    android:id="@+id/alpha_down"
+                    android:title="@string/descending"
+                    android:icon="@drawable/ic_alpha_down"/>
             </menu>
         </item>
     </group>

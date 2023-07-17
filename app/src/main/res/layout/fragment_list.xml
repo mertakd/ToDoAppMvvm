@@ -39,8 +39,9 @@
             android:clickable="true"
             android:focusable="true"
             android:navigateToAddFragment="@{true}"
-            android:src="@drawable/second_add"
+            android:src="@drawable/ic_add"
             app:backgroundTint="#7752BA"
+            android:tint="@color/white"
             android:elevation="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

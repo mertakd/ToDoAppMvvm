@@ -35,4 +35,11 @@ interface ToDoDao {
 
     @Query("SELECT * FROM todo_table ORDER BY CASE WHEN priority LIKE 'L%' THEN 1 WHEN priority LIKE 'M%' THEN 2 WHEN priority LIKE 'H%' THEN 3 END")
     fun sortByLowPriority(): LiveData<List<ToDoData>>
+
+
+    @Query("SELECT * FROM todo_table ORDER BY title ASC")
+    fun sortByAsc(): LiveData<List<ToDoData>>
+
+    @Query("SELECT * FROM todo_table ORDER BY title DESC")
+    fun sortByDsc(): LiveData<List<ToDoData>>
 }

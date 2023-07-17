@@ -13,6 +13,9 @@ class ToDoRepository(private val toDoDao: ToDoDao) {
     val sortByHighPriority: LiveData<List<ToDoData>> = toDoDao.sortByHighPriority()
     val sortByLowPriority: LiveData<List<ToDoData>> = toDoDao.sortByLowPriority()
 
+    val sortByAsc: LiveData<List<ToDoData>> = toDoDao.sortByAsc()
+    val sortByDsc: LiveData<List<ToDoData>> = toDoDao.sortByDsc()
+
 
     suspend fun insertData(toDoData: ToDoData){
         toDoDao.insertData(toDoData)

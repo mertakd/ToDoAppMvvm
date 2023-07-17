@@ -7,12 +7,14 @@
     <string name="description">Description</string>
     <string name="search">search</string>
     <string name="sort_by">Sort By</string>
-    <string name="priority_high">Priority High</string>
-    <string name="priority_low">Priority Low</string>
+    <string name="priority_high">Yüksek Öncelik</string>
+    <string name="priority_low">Düşük Öncelik</string>
     <string name="delete_all">Delete All</string>
     <string name="add">Add</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
+    <string name="ascending">Artan</string>
+    <string name="descending">Azalan</string>
 
     <string-array name="priorities">
         <item>High Priority</item>
