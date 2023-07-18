@@ -12,20 +12,20 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightGray">
+        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:orientation="vertical"
             >
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="@drawable/item_background">
+                android:layout_height="180dp"
+                >
 
 
                 <RelativeLayout
@@ -34,9 +34,9 @@
                     android:sendDataToUpdateFragment="@{toDoDataBinding}"
                     android:layout_height="150dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="50dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="2dp">
 
 
 
@@ -62,7 +62,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="55dp"
+                        android:layout_marginTop="45dp"
                         android:layout_marginEnd="45dp"
                         android:textColor="@color/white"
                         android:textSize="20sp"
@@ -74,9 +74,9 @@
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="0dp"
                         android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="35dp"
+                        android:layout_marginBottom="20dp"
                         android:layout_alignParentBottom="true"
                         android:maxLength="300"
                         android:maxLines="10"
@@ -85,16 +85,15 @@
                         />
 
 
-
-
                 </RelativeLayout>
 
                 <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="110dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="0dp"
-                    android:src="@drawable/ic_octopus2" />
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/cute_octo_colorful" />
+
             </RelativeLayout>
 
 

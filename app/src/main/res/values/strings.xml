@@ -5,17 +5,17 @@
     <string name="no_data">Not  Bulunmamakta</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
-    <string name="search">search</string>
-    <string name="sort_by">Sort By</string>
+    <string name="search">Ara</string>
+    <string name="sort_by">Sırala</string>
     <string name="priority_high">Yüksek Öncelik</string>
     <string name="priority_low">Düşük Öncelik</string>
-    <string name="delete_all">Delete All</string>
+    <string name="delete_all">Tüm Notları Sil</string>
     <string name="add">Add</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
     <string name="ascending">Artan</string>
     <string name="descending">Azalan</string>
-    <string name="octo">OctoNote</string>
+    <string name="octo">Octo Note</string>
 
     <string-array name="priorities">
         <item>High Priority</item>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/octo_background"
     tools:context=".SplashFragment">
 
 
@@ -11,11 +12,11 @@
         android:id="@+id/tv_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee_shade"
         android:text="@string/octo"
         android:textColor="#DFB7FE"
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:textStyle="bold"
-        android:fontFamily="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
