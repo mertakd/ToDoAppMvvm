@@ -4,14 +4,14 @@
     >
 
     <translate
-        android:fromXDelta="0%"
-        android:toXDelta="-800%"
-        android:duration="1500"/>
+        android:fromXDelta="-100%"
+        android:toXDelta="0%"
+        android:duration="2000"/>
 
     <alpha
-        android:fromAlpha="0"
-        android:toAlpha="1"
-        android:duration="1500"/>
+        android:fromAlpha="1"
+        android:toAlpha="0.1"
+        android:duration="4000"/>
 
 
 </set>

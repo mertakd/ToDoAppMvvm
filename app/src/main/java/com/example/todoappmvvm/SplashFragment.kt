@@ -2,42 +2,70 @@ package com.example.todoappmvvm
 
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.todoappmvvm.databinding.FragmentSplashBinding
 
 
+@Suppress("DEPRECATION")
 class SplashFragment : Fragment() {
+
+    private var _binding: FragmentSplashBinding? = null
+    private val binding get() = _binding!!
+
+    private val splashScreen = 10000
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        _binding = FragmentSplashBinding.inflate(layoutInflater, container, false)
 
-        Handler(Looper.getMainLooper()).postDelayed({
+
+
+        val animasyon1 = AnimationUtils.loadAnimation(activity,R.anim.animasyon1)
+        val animasyon2 = AnimationUtils.loadAnimation(activity,R.anim.animasyon2)
+        val animasyon3 = AnimationUtils.loadAnimation(activity,R.anim.animasyon3)
+
+        val imageView = binding.imageView
+        val imageView2 = binding.imageView2
+        val textView = binding.tvSplash
+
+        imageView.animation = animasyon1
+        imageView2.animation = animasyon2
+        textView.animation = animasyon3
+
+        Handler().postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_listFragment)
-        },3000)
-
-        val view =  inflater.inflate(R.layout.fragment_splash, container, false)
-
-        val animTop = AnimationUtils.loadAnimation(view.context,R.anim.from_top)
-        val animBotton = AnimationUtils.loadAnimation(view.context,R.anim.from_bottom)
-
-        val tvSplash = view.findViewById<TextView>(R.id.tv_splash)
-        val imgSplash = view.findViewById<ImageView>(R.id.img_octo)
-
-        tvSplash.animation = animBotton
-        imgSplash.animation = animTop
+        },splashScreen.toLong())
 
 
-        return view
+        return binding.root
+
+
+
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

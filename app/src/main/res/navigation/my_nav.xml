@@ -61,6 +61,8 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            app:destination="@id/listFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
