@@ -1,6 +1,7 @@
 package com.example.todoappmvvm.fragments.list
 
 import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.widget.SearchView
@@ -11,9 +12,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.todoappmvvm.MainActivity
 import com.example.todoappmvvm.R
 import com.example.todoappmvvm.data.models.ToDoData
 import com.example.todoappmvvm.data.viewmodel.ToDoViewModel
@@ -21,7 +25,9 @@ import com.example.todoappmvvm.databinding.FragmentListBinding
 import com.example.todoappmvvm.fragments.SharedViewModel
 import com.example.todoappmvvm.fragments.list.adapter.ListAdapter
 import com.example.todoappmvvm.utils.observeOnce
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
+
 
 
 class ListFragment : Fragment(), SearchView.OnQueryTextListener{
@@ -42,10 +48,18 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
         // Data binding
         _binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
-        binding.lifecycleOwner = this //binding nesnesi yaşam döngüsü sahibinin(bu sınıfat yaşam döngüsünü sahibi fragment) durumunu takip eder.(bu iki satır layout içerisinde data tag ı içinde yapılan işlem)
+        val bottomNavigationView = activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView?.visibility = View.VISIBLE
+
+
+        binding.lifecycleOwner = viewLifecycleOwner //binding nesnesi yaşam döngüsü sahibinin(bu sınıfat yaşam döngüsünü sahibi fragment) durumunu takip eder.(bu iki satır layout içerisinde data tag ı içinde yapılan işlem)
         binding.mBindingSharedViewModel = mSharedViewModel //viewmodel nesnesini, viewbinding nesnesine atar.
 
-       //setup recyclerview
+
+
+
+
+        //setup recyclerview
         setupRecyclerview()
 
 
@@ -80,8 +94,12 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
     }
 
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
 
 
         val menuHost: MenuHost = requireActivity()
@@ -121,6 +139,9 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
     }
+
+
+
 
 
 
@@ -254,6 +275,12 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
         builder.setMessage("Her şeyi kaldırmak istediğinizden emin misiniz?")
         builder.create().show()
     }
+
+
+
+
+
+
 
 
     override fun onDestroyView() {

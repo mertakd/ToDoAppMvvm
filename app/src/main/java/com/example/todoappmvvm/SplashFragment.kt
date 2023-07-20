@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.todoappmvvm.databinding.FragmentSplashBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 @Suppress("DEPRECATION")
@@ -27,9 +28,6 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSplashBinding.inflate(layoutInflater, container, false)
-
-
-
 
 
         val animasyon1 = AnimationUtils.loadAnimation(activity,R.anim.animasyon1)
