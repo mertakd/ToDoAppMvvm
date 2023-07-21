@@ -44,6 +44,7 @@
     <color name="fabColor">@color/purple_200</color>
     <color name="octopusIconColor">@color/purple_200</color>
     <color name="octopusIconEyeColor">@color/black</color>
+    <color name="addFragmentTitles">@android:color/transparent</color>
 
     // Custom CardView Style
     <color name="strokeColor">@color/lightMediumGray</color>

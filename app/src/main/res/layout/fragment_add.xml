@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
+    android:background="@color/backgroundColor"
     tools:context=".fragments.add.AddFragment">
 
 
@@ -18,7 +19,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/title"
-        android:background="@android:color/transparent"
+        android:background="@color/addFragmentTitles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +33,7 @@
         android:entries="@array/priorities"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
+        android:background="@color/addFragmentTitles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +50,7 @@
         android:paddingEnd="24dp"
         android:paddingTop="16dp"
         android:inputType="textMultiLine"
-        android:background="@android:color/transparent"
+        android:background="@color/addFragmentTitles"
         android:hint="@string/description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
