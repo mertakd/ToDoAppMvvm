@@ -42,7 +42,7 @@
     <color name="fabColor">@color/darker</color>
     <color name="octopusIconColor">@color/darker</color>
     <color name="octopusIconEyeColor">@color/white</color>
-    <color name="addFragmentTitles">#1C1818</color>
+    <color name="addFragmentTitles">@color/darker</color>
 
     // Custom Chip Style
     <color name="checkedChipBackgroundColor">@color/dark</color>
