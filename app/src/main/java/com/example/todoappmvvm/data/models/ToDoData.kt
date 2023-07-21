@@ -5,6 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.todoappmvvm.data.models.Priority
 import kotlinx.parcelize.Parcelize
+import java.time.OffsetDateTime
 
 @Entity(tableName = "todo_table")
 @Parcelize

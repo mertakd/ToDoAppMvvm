@@ -15,6 +15,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -43,12 +44,11 @@
             android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/purple_200"
+            android:backgroundTint="@color/bottomNavigationBackground"
             app:fabAlignmentMode="end"
             app:fabCradleMargin="20dp"
             app:fabCradleRoundedCornerRadius="20dp"
             app:fabCradleVerticalOffset="20dp"
-            android:background="@drawable/round_corners"
             android:layout_gravity="bottom">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -58,7 +58,7 @@
                 android:layout_marginEnd="16dp"
                 app:itemIconTint="@color/navigation_items"
                 app:itemTextColor="@color/white"
-                android:background="@android:color/transparent"
+                android:background="@color/bottomNavigationBackground"
                 app:menu="@menu/bottom_nav_menu"/>
 
 

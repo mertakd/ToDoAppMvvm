@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/almendra_bold</item>
+        <item>@font/almendra_sc</item>
         <item>@font/bangers</item>
+        <item>@font/black_ops_one</item>
         <item>@font/bungee</item>
         <item>@font/bungee_inline</item>
         <item>@font/bungee_outline</item>
         <item>@font/bungee_shade</item>
+        <item>@font/ewert</item>
     </array>
 </resources>
