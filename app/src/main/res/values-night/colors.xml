@@ -68,5 +68,10 @@
     <color name="bottomNavCheckedItemColor">@color/colorAccent</color>
 
 
+    //Gradient
+    <color name="start_color">#5C258D</color>
+    <color name="end_color">#4389A2</color>
+
+
 
 </resources>

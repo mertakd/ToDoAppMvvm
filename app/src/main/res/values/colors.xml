@@ -62,4 +62,9 @@
     <color name="bottomNavBackground">@color/purple_200</color>
     <color name="bottomNavItemColor">@color/white</color>
     <color name="bottomNavCheckedItemColor">@color/darkGray</color>
+
+
+    //Gradient
+    <color name="start_color">#5C258D</color>
+    <color name="end_color">#4389A2</color>
 </resources>

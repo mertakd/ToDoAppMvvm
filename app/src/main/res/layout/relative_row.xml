@@ -1,108 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp">
 
-    <data>
-        <variable
-            name="toDoDataBinding"
-            type="com.example.todoappmvvm.data.models.ToDoData" />
-    </data>
+    <!-- Simüle edilen dışta taşan ikon -->
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightGray">
+    <!-- Gerçek içerik kısmı -->
+    <ImageView
+        android:id="@+id/outerIcon"
+        android:layout_width="21dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/cute_octo_colorful"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemCardView"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/outerIcon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- İçerik View'leri buraya yerleştirin -->
+        <!-- Örnek olarak TextView ekleyelim -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical"
-            >
+            android:text="Başlık"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
 
+        <!-- Diğer içerik view'lerini buraya ekleyin -->
+        <!-- Örnek olarak ImageView ekleyelim -->
+        <ImageView
+            android:id="@+id/contentImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/cute_octo_colorless"
+            android:tint="@android:color/black"
+            android:contentDescription="İçerik İmajı"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="@drawable/item_background">
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:background="@drawable/item_background_relative"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp">
-
-
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/priority_indicator"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginTop="60dp"
-                        android:layout_marginEnd="50dp"
-                        android:layout_alignParentRight="true"
-                        android:parsePriorityColor="@{toDoDataBinding.priority}"
-                        app:cardBackgroundColor="@color/red"
-                        app:cardCornerRadius="100dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-
-                    <TextView
-                        android:id="@+id/title_txt"
-                        android:layout_width="240dp"
-                        android:layout_height="wrap_content"
-                        android:text="@{toDoDataBinding.title}"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="55dp"
-                        android:layout_marginEnd="45dp"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-
-                    <TextView
-                        android:id="@+id/description_txt"
-                        android:layout_width="270dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="35dp"
-                        android:layout_alignParentBottom="true"
-                        android:maxLength="300"
-                        android:maxLines="10"
-                        android:text="@{toDoDataBinding.description}"
-                        android:textColor="@color/white"
-                        />
-
-
-
-
-                </RelativeLayout>
-
-                <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="110dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="0dp"
-                    android:src="@drawable/ic_octopus2" />
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-
-
-
-
-
-    </ScrollView>
-</layout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

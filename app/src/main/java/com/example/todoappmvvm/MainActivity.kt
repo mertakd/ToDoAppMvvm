@@ -38,17 +38,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        // Bottom Navigation Bar'ı 6 saniye sonra görünür hale getirme işlemi
-        binding.bottomAppBar.visibility = View.GONE
-        Handler(Looper.getMainLooper()).postDelayed({
-            binding.bottomAppBar.visibility = View.VISIBLE
-        }, 6000)
-
-        binding.bottomNavigationView.background = null
-
-
-
-
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.navController
 
@@ -58,11 +47,9 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setupWithNavController(navController)
 
 
-
+        
 
     }
-
-
 
 
 

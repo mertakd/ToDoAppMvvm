@@ -28,9 +28,7 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
     //spinner daki textview ın yazı rengini değiştiriyoruz
     val listener: AdapterView.OnItemSelectedListener = object :
         AdapterView.OnItemSelectedListener{
-
         override fun onNothingSelected(p0: AdapterView<*>?) {}
-
         override fun onItemSelected(
             parent: AdapterView<*>?,
             view: View?,
@@ -38,12 +36,11 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
             id: Long
         ) {
             when(position){
-                0 -> { (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.red))}
-                1 -> { (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.yellow))}
-                2 -> { (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.green))}
+                0 -> { (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.red)) }
+                1 -> { (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.yellow)) }
+                2 -> { (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.green)) }
             }
         }
-
     }
 
 
@@ -67,11 +64,11 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
     //stringden nesneye dönüştürülüyor.
     fun parsePriority(priority: String): Priority {
         return when(priority){
-            "High Priority" -> {
+            "Yüksek Öncelik" -> {
                 Priority.HIGH}
-            "Medium Priority" -> {
+            "Orta Öncelik" -> {
                 Priority.MEDIUM}
-            "Low Priority" -> {
+            "Düşük Öncelik" -> {
                 Priority.LOW}
             else -> Priority.LOW
 

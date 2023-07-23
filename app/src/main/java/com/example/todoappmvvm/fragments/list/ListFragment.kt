@@ -48,8 +48,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
         // Data binding
         _binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
-        val bottomNavigationView = activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        bottomNavigationView?.visibility = View.VISIBLE
+
 
 
         binding.lifecycleOwner = viewLifecycleOwner //binding nesnesi yaşam döngüsü sahibinin(bu sınıfat yaşam döngüsünü sahibi fragment) durumunu takip eder.(bu iki satır layout içerisinde data tag ı içinde yapılan işlem)
