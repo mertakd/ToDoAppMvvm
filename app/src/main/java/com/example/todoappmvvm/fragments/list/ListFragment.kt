@@ -17,6 +17,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.todoappmvvm.MainActivity
 import com.example.todoappmvvm.R
 import com.example.todoappmvvm.data.models.ToDoData
@@ -30,6 +31,7 @@ import com.google.android.material.snackbar.Snackbar
 
 
 
+@Suppress("DEPRECATION")
 class ListFragment : Fragment(), SearchView.OnQueryTextListener{
 
     private val mToDoViewModel : ToDoViewModel by viewModels()
@@ -159,6 +161,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener{
     private fun swipeToDelete(recyclerView: RecyclerView) {
 
         val swipeToDeleteCallback = object : SwipeToDelete() {
+
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val deletedItem = adapter.dataList[viewHolder.adapterPosition]
                 mToDoViewModel.deleteItem(deletedItem)

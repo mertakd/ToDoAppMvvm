@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.*
 
 
@@ -21,14 +22,19 @@ class SplashActivity : AppCompatActivity() {
 
         GlobalScope.launch(Dispatchers.Main) {
             try {
-                delay(6000)
+                delay(3000)
+            } catch (ex: Exception) {
+                ex.printStackTrace()
+            }finally {
                 val intent = Intent(this@SplashActivity, MainActivity::class.java)
                 startActivity(intent)
                 finish()
-            } catch (ex: Exception) {
-                ex.printStackTrace()
             }
         }
+
+
+
+
 
     }
 }

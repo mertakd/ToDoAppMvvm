@@ -53,6 +53,7 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
             false
         }else !(title.isEmpty() || description.isEmpty())
     }*/
+    //add ve update işlemi için kullanılıyor.
     fun verifyDataFromUser(title: String, description: String): Boolean {
         return !(title.isEmpty() || description.isEmpty())
     }
@@ -62,6 +63,7 @@ class SharedViewModel(application: Application) : AndroidViewModel(application){
 
 
     //stringden nesneye dönüştürülüyor.
+    //add ve update fragment da insert ve update işlemi yaparken kullanılıyor
     fun parsePriority(priority: String): Priority {
         return when(priority){
             "Yüksek Öncelik" -> {

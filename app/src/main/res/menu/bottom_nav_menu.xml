@@ -8,15 +8,11 @@
         app:iconTint="@color/white"
         android:icon="@drawable/ic_home" />
 
-    <item android:id="@+id/searchFragment"
-        android:title="Ara"
-        app:itemIconTint="@color/white"
-        app:iconTint="@color/white"
-        android:icon="@drawable/ic_search" />
+
 
 
     <item android:id="@+id/profileFragment"
-        android:title="Profil"
+        android:title="Hesap"
         app:itemIconTint="@color/white"
         app:iconTint="@color/white"
         android:icon="@drawable/ic_person" />

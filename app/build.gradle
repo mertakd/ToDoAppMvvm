@@ -85,7 +85,11 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
 
 
+    //Lottie Animation
     implementation 'com.airbnb.android:lottie:6.1.0'
+
+    //Circle Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
 

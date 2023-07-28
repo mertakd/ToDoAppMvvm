@@ -46,7 +46,6 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
         val currentItem = dataList[position]
         holder.bind(currentItem)
     }

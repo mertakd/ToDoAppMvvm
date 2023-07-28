@@ -43,6 +43,7 @@ class BindingAdapters {
 
 
         //priority nesnesini, integer a dönüştürüyor.
+        //priority nesnelerini update fragment a taşımak için int e çeviriyoruz
         @BindingAdapter("android:parsePriorityToInt")
         @JvmStatic
         fun parsePriorityToInt(view: Spinner, priority: Priority){
@@ -74,7 +75,7 @@ class BindingAdapters {
           //bu veriler list fragment dan update fragment a taşınıyor.
         @BindingAdapter("android:sendDataToUpdateFragment")
         @JvmStatic
-        fun sendDataToUpdateFragment(view: RelativeLayout, currentItem: ToDoData){
+        fun sendDataToUpdateFragment(view: ConstraintLayout, currentItem: ToDoData){
             view.setOnClickListener {
                 val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
                 view.findNavController().navigate(action)
