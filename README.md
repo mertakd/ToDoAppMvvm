@@ -24,16 +24,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-![mvvm](https://github.com/mertakd/ToDoAppMvvm/assets/65607835/da7a6f09-abb5-49c3-827d-91ff9530107b)
+![room](https://github.com/mertakd/ToDoAppMvvm/assets/65607835/c269bc6a-9dc5-4c34-9e24-1c77770b6ab6)
