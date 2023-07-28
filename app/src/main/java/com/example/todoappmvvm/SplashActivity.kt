@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
         GlobalScope.launch(Dispatchers.Main) {
             try {
-                delay(3000)
+                delay(6000)
             } catch (ex: Exception) {
                 ex.printStackTrace()
             }finally {
