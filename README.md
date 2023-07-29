@@ -15,6 +15,8 @@
 - Splash Screen with Lottie Animation
 - Recyclerview Animation
 - Swipe Delete
+- Night Mode
+- Icon
 
 
 
