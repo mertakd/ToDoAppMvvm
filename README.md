@@ -4,7 +4,7 @@
 ## Architecture
 - MVVM
 - Room
-- Navigation
+- Navigation(args)
 - LiveData
 - Coroutines
 - Data Binding(Binding Adapter)
@@ -17,6 +17,12 @@
 - Swipe Delete
 - Night Mode
 - Icon
+
+
+## App Gif  
+
+![20230729_141229](https://github.com/mertakd/ToDoAppMvvm/assets/65607835/0368b4c3-602a-4a52-af85-a5ebd688ed65)
+
 
 
 
