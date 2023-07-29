@@ -3,6 +3,7 @@
 
 ## Architecture
 - MVVM
+- View Model
 - Room
 - Navigation(args)
 - LiveData
